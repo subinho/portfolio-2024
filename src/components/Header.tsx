@@ -1,5 +1,40 @@
+import { close, menu } from "../assets/icons";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
 const Header = () => {
-  return <div>Header</div>;
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+
+  const handleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
+  return (
+    <header>
+      <h1 className="topnav_logo">Stepan Subrt</h1>
+      <nav className="topnav">
+        <button className="topnav_open topnav_btn" onClick={handleMenu}>
+          <img src={menu} alt="" height={32} width={32} />
+        </button>
+        <div className={`topnav_menu ${showMenu && "active"}`}>
+          <button className="topnav_close topnav_btn" onClick={handleMenu}>
+            <img src={close} alt="" height={32} width={32} />
+          </button>
+          <ul className="topnav_links">
+            <li className="topnav_item">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="topnav_item">
+              <Link to="/about">About</Link>
+            </li>
+            <li className="topnav_item">
+              <Link to="#">Resume</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  );
 };
 
 export default Header;

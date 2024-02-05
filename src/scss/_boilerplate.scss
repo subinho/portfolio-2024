@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 
-// git repo
-// git remote add origin https://github.com/subinho/portfolio-2024.git
-// git branch -M main
-// git push -u origin main
-
 *,
 *::before,
 *::after {
@@ -33,6 +28,22 @@ button,
 textarea,
 select {
   font: inherit;
+  background: none;
+  border: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a,
+a:visited,
+a:hover,
+a:link,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 p,
