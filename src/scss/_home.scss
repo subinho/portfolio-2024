@@ -1,0 +1,30 @@
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+
+  &_welcome {
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  &_heading {
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  &_strong {
+    color: #1f9af1 !important;
+  }
+
+  &_arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
