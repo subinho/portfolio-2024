@@ -22,13 +22,23 @@ const Header = () => {
           </button>
           <ul className="topnav_links">
             <li className="topnav_item">
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={() => showMenu && setShowMenu(false)}>
+                Home
+              </Link>
             </li>
             <li className="topnav_item">
-              <Link to="/about">About</Link>
+              <Link to="/about" onClick={() => showMenu && setShowMenu(false)}>
+                About
+              </Link>
             </li>
             <li className="topnav_item">
-              <Link to="#">Resume</Link>
+              <Link
+                to="https://drive.google.com/file/d/1MnbCnAnqtRkje1B6FuBHOSryRB0awvey/view?usp=drive_link"
+                target="_blank"
+                onClick={() => showMenu && setShowMenu(false)}
+              >
+                Resume
+              </Link>
             </li>
           </ul>
         </div>
