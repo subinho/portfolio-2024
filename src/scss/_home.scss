@@ -10,11 +10,20 @@
   &_welcome {
     font-size: 32px;
     font-weight: 400;
+
+    @media (width <= 720px) {
+      font-size: 22px;
+      margin-block-end: 6px;
+    }
   }
 
   &_heading {
     font-size: 40px;
     font-weight: 400;
+
+    @media (width <= 720px) {
+      font-size: 28px;
+    }
   }
 
   &_strong {
