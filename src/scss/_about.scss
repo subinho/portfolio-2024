@@ -1,0 +1,29 @@
+.about {
+  min-height: calc(100vh - 333px);
+  padding: 40px 20px;
+  margin-block-end: 200px;
+  &_container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  &_heading {
+    font-size: 42px;
+    margin-block-end: 50px;
+  }
+
+  &_desc {
+    font-size: 18px;
+    margin-block-end: 20px;
+    letter-spacing: 0.4px;
+  }
+
+  &_btn {
+    cursor: pointer;
+  }
+
+  &_link {
+    // padding: 8px 12px;
+    border-bottom: 1px solid black;
+  }
+}
