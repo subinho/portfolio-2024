@@ -7,13 +7,15 @@ const Footer = () => {
       <div className="footer_nav">
         <ul className="footer_links">
           <li>
-            <Link to="#hero">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/About">About</Link>
           </li>
           <li>
-            <Link to="#">Resume</Link>
+            <Link to="https://drive.google.com/file/d/1bGgAV_aPCyOjbMpCksNx-DyOanKzYACT/view?usp=drive_link">
+              Resume
+            </Link>
           </li>
         </ul>
       </div>
