@@ -27,7 +27,7 @@ const projectData: ProjectProps[] = [
     desc: "Small bussines page, which offers cosmetic and terapeutic services.",
     badge: "Wordpress",
     badgeColor: "#1f9af1",
-    refer: "krasaaduse.cz",
+    refer: "https://www.krasaaduse.cz",
   },
 ];
 
