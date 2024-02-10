@@ -19,14 +19,21 @@ const Project: FC<ProjectProps> = ({
         <span className="project_badge" style={{ backgroundColor: badgeColor }}>
           {badge}
         </span>
-        <button type="button" className="project_details-btn">
+        <button
+          type="button"
+          className={`project_details-btn ${
+            refer === "#" && "under_construction"
+          }`}
+        >
           <Link
             to={refer}
             target="_blank"
             rel="norefer"
-            className="project_details-link"
+            className={`project_details-link ${
+              refer === "#" && "under_construction"
+            }`}
           >
-            Visit site
+            {refer === "#" ? "under construction" : "Visit site"}
           </Link>
         </button>
       </div>

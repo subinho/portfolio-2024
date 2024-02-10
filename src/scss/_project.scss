@@ -63,7 +63,7 @@
     }
 
     &-link {
-      color: white !important;
+      color: white;
     }
   }
 
@@ -82,4 +82,11 @@
       font-size: 12px;
     }
   }
+}
+
+.under_construction {
+  color: #000 !important;
+  background-color: #fff !important;
+  cursor: default;
+  padding: 2px 0;
 }
