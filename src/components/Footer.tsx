@@ -13,7 +13,10 @@ const Footer = () => {
             <Link to="/About">About</Link>
           </li>
           <li>
-            <Link to="https://drive.google.com/file/d/1bGgAV_aPCyOjbMpCksNx-DyOanKzYACT/view?usp=drive_link">
+            <Link
+              to="https://drive.google.com/file/d/1bGgAV_aPCyOjbMpCksNx-DyOanKzYACT/view?usp=drive_link"
+              target="_blank"
+            >
               Resume
             </Link>
           </li>
