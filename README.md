@@ -1,30 +1,41 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A portfolio application about me.
 
-Currently, two official plugins are available:
+Live: stepansubrt.dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Build with
 
-## Expanding the ESLint configuration
+[![React](https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB)](#) [![Sass](https://img.shields.io/badge/Sass-C69?logo=sass&logoColor=fff)](#) [![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff)](#)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting started
 
-- Configure the top-level `parserOptions` property like this:
+Install with npm
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+#### Prerequisites
+
+NPM
+
+```bash
+npm install npm@latest -g
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+#### Installation
+
+1. Clone the repository
+
+```bash
+  git clone https://github.com/subinho/portfolio-2024.git
+```
+
+2. Install composer packages
+
+```bash
+  npm install
+```
+
+3. Start server
+
+```bash
+npm run dev
+```

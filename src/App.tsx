@@ -1,7 +1,7 @@
-import "./scss/style.scss";
-import { Header, Footer } from "./components";
-import { Home, About } from "./pages";
-import { Route, Routes } from "react-router-dom";
+import './scss/style.scss';
+import { Header, Footer } from './components';
+import { Home, About } from './pages';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (

@@ -66,20 +66,22 @@
       color: white;
     }
   }
+  &_badges {
+    margin-bottom: 20px;
+    &-badge {
+      width: fit-content;
+      background-color: #1b769cbd;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 2px;
+      margin-bottom: 32px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-right: 12px;
 
-  &_badge {
-    display: block;
-    width: fit-content;
-    background-color: #1b769cbd;
-    color: white;
-    padding: 2px 8px;
-    border-radius: 2px;
-    margin-bottom: 32px;
-    font-size: 14px;
-    font-weight: 500;
-
-    @media (width <= 720px) {
-      font-size: 12px;
+      @media (width <= 720px) {
+        font-size: 12px;
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
-import { close, menu } from "../assets/icons";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { close, menu } from '../assets/icons';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -16,7 +16,7 @@ const Header = () => {
         <button className="topnav_open topnav_btn" onClick={handleMenu}>
           <img src={menu} alt="" height={32} width={32} />
         </button>
-        <div className={`topnav_menu ${showMenu && "active"}`}>
+        <div className={`topnav_menu ${showMenu && 'active'}`}>
           <button className="topnav_close topnav_btn" onClick={handleMenu}>
             <img src={close} alt="" height={32} width={32} />
           </button>
@@ -33,7 +33,7 @@ const Header = () => {
             </li>
             <li className="topnav_item">
               <Link
-                to="https://drive.google.com/file/d/1bGgAV_aPCyOjbMpCksNx-DyOanKzYACT/view?usp=drive_link"
+                to="https://drive.google.com/file/d/1CN2WKjyUQRnbLDSEebvU5aWeII9sYeNv/view"
                 target="_blank"
                 onClick={() => showMenu && setShowMenu(false)}
               >
