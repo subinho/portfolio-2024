@@ -3,7 +3,7 @@ export interface ProjectProps {
   image: string;
   heading: string;
   desc: string;
-  badge: string;
+  badges: string[];
   badgeColor: string;
   refer: string;
 }
