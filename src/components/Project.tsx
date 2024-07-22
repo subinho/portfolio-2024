@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
-import { FC } from "react";
-import { ProjectProps } from "../assets/interfaces/global";
+import { Link } from 'react-router-dom';
+import { FC } from 'react';
+import { ProjectProps } from '../assets/interfaces/global';
 
 const Project: FC<ProjectProps> = ({
   image,
   heading,
   desc,
-  badge,
-  badgeColor,
+  badges,
+  // badgeColor,
   refer,
 }): JSX.Element => {
   return (
@@ -16,13 +16,20 @@ const Project: FC<ProjectProps> = ({
       <div className="project_details">
         <h3 className="project_details-heading">{heading}</h3>
         <p className="project_details-desc">{desc}</p>
-        <span className="project_badge" style={{ backgroundColor: badgeColor }}>
+        {/* <span className="project_badge" style={{ backgroundColor: badgeColor }}>
           {badge}
-        </span>
+        </span> */}
+        <div className="project_badges">
+          {badges.map((badge, index) => (
+            <span key={index} className="project_badges-badge">
+              {badge}
+            </span>
+          ))}
+        </div>
         <button
           type="button"
           className={`project_details-btn ${
-            refer === "#" && "under_construction"
+            refer === '#' && 'under_construction'
           }`}
         >
           <Link
@@ -30,10 +37,10 @@ const Project: FC<ProjectProps> = ({
             target="_blank"
             rel="norefer"
             className={`project_details-link ${
-              refer === "#" && "under_construction"
+              refer === '#' && 'under_construction'
             }`}
           >
-            {refer === "#" ? "under construction" : "Visit site"}
+            {refer === '#' ? 'under construction' : 'Visit site'}
           </Link>
         </button>
       </div>

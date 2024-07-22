@@ -1,5 +1,5 @@
-import { Project } from "../components";
-import { projectData } from "../assets/data";
+import { Project } from '../components';
+import { projectData } from '../assets/data';
 
 const Projects = () => {
   return (
@@ -10,7 +10,7 @@ const Projects = () => {
             image={item.image}
             heading={item.heading}
             desc={item.desc}
-            badge={item.badge}
+            badges={item.badges}
             badgeColor={item.badgeColor}
             refer={item.refer}
             key={item.id}
