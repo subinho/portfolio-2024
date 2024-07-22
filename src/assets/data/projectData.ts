@@ -6,7 +6,7 @@ const projectData: ProjectProps[] = [
     id: 1,
     image: notes,
     heading: 'Notes app',
-    desc: 'A notes application, where you can create notes and store them in your database on your account',
+    desc: 'A notes application, where you can create notes which are linked to your account and store them in your database.',
     badges: [
       { name: 'PHP', bgColor: '#777BB3', color: '#fff' },
       { name: 'MySQL', bgColor: '#00758F', color: '#fff' },
@@ -20,7 +20,7 @@ const projectData: ProjectProps[] = [
     id: 2,
     image: quiz_app,
     heading: 'Quiz App',
-    desc: 'Series of questions, try to beat yours highest score',
+    desc: 'Series of questions, try to beat your highest score.',
     badges: [
       { name: 'HTML', bgColor: '#ff6d00', color: '#fff' },
       { name: 'JavaScript', bgColor: '#ffd600', color: '#000' },
