@@ -9,6 +9,7 @@ const Project: FC<ProjectProps> = ({
   badges,
   // badgeColor,
   refer,
+  github,
 }): JSX.Element => {
   return (
     <div className="project_item">
@@ -21,28 +22,42 @@ const Project: FC<ProjectProps> = ({
         </span> */}
         <div className="project_badges">
           {badges.map((badge, index) => (
-            <span key={index} className="project_badges-badge">
-              {badge}
+            <span
+              key={index}
+              className="project_badges-badge"
+              style={{
+                backgroundColor: badge['bgColor'],
+                color: badge['color'],
+              }}
+            >
+              {badge['name']}
             </span>
           ))}
         </div>
-        <button
-          type="button"
-          className={`project_details-btn ${
-            refer === '#' && 'under_construction'
-          }`}
-        >
+        <div className="project_details-links">
           <Link
             to={refer}
             target="_blank"
             rel="norefer"
-            className={`project_details-link ${
-              refer === '#' && 'under_construction'
+            className={`${
+              refer === '#' ? 'project_details-hidden' : 'project_details-live'
             }`}
           >
-            {refer === '#' ? 'under construction' : 'Visit site'}
+            Live
           </Link>
-        </button>
+          <Link
+            to={github}
+            target="_blank"
+            rel="norefer"
+            className={`${
+              github === '#'
+                ? 'project_details-hidden'
+                : 'project_details-github'
+            }`}
+          >
+            Github
+          </Link>
+        </div>
       </div>
     </div>
   );

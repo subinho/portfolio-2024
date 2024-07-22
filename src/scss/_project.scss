@@ -50,20 +50,33 @@
       }
     }
 
-    &-btn {
+    &-live {
       font-size: 16px;
       font-weight: 500;
       padding: 6px 14px;
       background-color: #1f9af1;
-      color: white;
+      color: white !important;
+      margin-right: 10px;
 
       @media (width <= 720px) {
         font-size: 14px;
       }
     }
 
-    &-link {
-      color: white;
+    &-github {
+      font-size: 16px;
+      font-weight: 500;
+      padding: 6px 14px;
+      background-color: #424242;
+      color: white !important;
+
+      @media (width <= 720px) {
+        font-size: 14px;
+      }
+    }
+
+    &-hidden {
+      display: none;
     }
   }
   &_badges {
@@ -76,7 +89,7 @@
       border-radius: 2px;
       margin-bottom: 32px;
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 700;
       margin-right: 12px;
 
       @media (width <= 720px) {

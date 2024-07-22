@@ -14,6 +14,7 @@ const Projects = () => {
             badgeColor={item.badgeColor}
             refer={item.refer}
             key={item.id}
+            github={item.github}
           />
         ))}
       </div>
