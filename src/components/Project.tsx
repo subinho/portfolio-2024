@@ -7,7 +7,6 @@ const Project: FC<ProjectProps> = ({
   heading,
   desc,
   badges,
-  // badgeColor,
   refer,
   github,
 }): JSX.Element => {
@@ -17,9 +16,6 @@ const Project: FC<ProjectProps> = ({
       <div className="project_details">
         <h3 className="project_details-heading">{heading}</h3>
         <p className="project_details-desc">{desc}</p>
-        {/* <span className="project_badge" style={{ backgroundColor: badgeColor }}>
-          {badge}
-        </span> */}
         <div className="project_badges">
           {badges.map((badge, index) => (
             <span

@@ -1,10 +1,33 @@
 .about {
-  min-height: calc(100vh - 333px);
-  padding: 40px 20px;
+  padding: 3em 1.5em;
   margin-block-end: 200px;
   &_container {
     max-width: 960px;
     margin: 0 auto;
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: row;
+    padding: 2em 1em;
+    gap: 1em;
+
+    @media (width <= 765px) {
+      flex-direction: column-reverse;
+
+    }
+  }
+
+  &_image {
+    flex: 1;
+    width: calc(50% - 1em);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: contain;
+
+    @media (width <= 765px) {
+      width: 100%;
+    }
   }
 
   &_heading {
@@ -12,10 +35,18 @@
     margin-block-end: 50px;
   }
 
+  &_name {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: .3em;
+  }
+
   &_desc {
     font-size: 18px;
     margin-block-end: 20px;
     letter-spacing: 0.4px;
+    color: #919191;
+    margin: auto;
   }
 
   &_btn {
@@ -23,7 +54,65 @@
   }
 
   &_link {
-    // padding: 8px 12px;
     border-bottom: 1px solid black;
+  }
+
+  &_skills {
+
+    & h4 {
+      margin-bottom: 1em;
+    }
+  }
+
+  &_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    & > li {
+      padding: 2px 12px;
+      background-color: lightgrey;
+      border-radius: 3px;
+      cursor: default;
+    }
+  }
+
+  &_socials {
+    margin-top: 2em;
+
+    & h4 {
+      margin-bottom: 1em;
+    }
+  }
+
+  &_links {
+    display: flex;
+    flex-direction: row;
+    gap:1em;
+
+    &-linkedin {
+      padding: 6px 14px;
+      background-color: rgb(56, 189, 248);
+      color: white !important;
+      border-radius: 4px;
+      font-weight: bold;
+
+      &:hover {
+        opacity: .9;
+      }
+    }
+
+    &-email {
+      padding: 6px 14px;
+      background-color: #424242;
+      color: white !important;
+      border-radius: 4px;
+      font-weight: bold;
+
+      &:hover {
+        opacity: .9;
+      }
+    }
   }
 }

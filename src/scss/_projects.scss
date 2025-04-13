@@ -1,30 +1,32 @@
 .projects {
-  margin-block: 200px;
+  padding: 0 1.5em;
+  margin-bottom: 5em;
   &_container {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1em;
+
+    @media (width <= 1080px) {
+      flex-direction: column;
+    }
   }
 
   &_item {
-    // display: flex;
-    // flex-direction: row;
-    display: grid;
-    grid-template-columns: repeat(15, 1fr);
-    grid-template-rows: repeat(24, 12px);
+    display: flex;
+    flex-direction: column;
     gap: 10px;
     position: relative;
   }
 
   &_image {
-    // flex: 1 0 30%;
     grid-column: 1 / 8;
     grid-row: 5 / 21;
   }
 
   &_details {
-    // flex: 1 0 70%;
-    grid-column: 9 / 15;
-    grid-row: 7/21;
     &-heading {
       font-size: 36px;
       font-weight: 500;

@@ -1,5 +1,5 @@
 import './scss/style.scss';
-import { Header, Footer } from './components';
+import { Header, Footer, Hero } from './components';
 import { Home, About } from './pages';
 import { Route, Routes } from 'react-router-dom';
 
@@ -7,10 +7,12 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+        <main>
+          <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+          </Routes>
+        </main>
       <Footer />
     </>
   );

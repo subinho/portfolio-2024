@@ -14,3 +14,10 @@ export interface ProjectProps {
   refer: string;
   github: string;
 }
+
+export interface SkillsProps {
+  id: number,
+  name: string,
+  bgColor: string,
+  color: string
+}

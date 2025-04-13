@@ -1,16 +1,21 @@
 .footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
-  padding: 12px 24px;
-  height: 80px;
-  max-width: 1200px;
-  margin: auto auto 0;
-
-  @media (width <= 400px) {
-    flex-direction: column-reverse;
+  background-color: #272727;
+  color: white;
+  &_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px 24px;
+    height: 80px;
+    max-width: 1200px;
+    margin: auto auto 0;
+  
+    @media (width <= 400px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &_links {
@@ -20,6 +25,11 @@
     gap: 20px;
     font-size: 15px;
     font-weight: 400;
+    text-transform: uppercase;
+
+    & a:hover {
+      opacity: .8;
+    }
 
     @media (width <= 400px) {
       gap: 30px;

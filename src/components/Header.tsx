@@ -1,48 +1,45 @@
+import React from 'react';
 import { close, menu } from '../assets/icons';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const [showMenu, setShowMenu] = useState<boolean>(false);
+    const [showMenu, setShowMenu ] = useState(false);
 
-  const handleMenu = () => {
-    setShowMenu(!showMenu);
-  };
+    React.useEffect(() => {
+      const handleScroll = () => {
+        const scrollThreshold = 60; // Adjust as needed
+        if (window.scrollY > scrollThreshold) {
+          document.querySelector('.header')?.classList.add('bg_black');
+        } else {
+          document.querySelector('.header')?.classList.remove('bg_black');
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const toggleMenu = () => {
+      setShowMenu(!showMenu);
+    }
 
   return (
-    <header>
-      <h1 className="topnav_logo">Stepan Subrt</h1>
-      <nav className="topnav">
-        <button className="topnav_open topnav_btn" onClick={handleMenu}>
-          <img src={menu} alt="" height={32} width={32} />
-        </button>
-        <div className={`topnav_menu ${showMenu && 'active'}`}>
-          <button className="topnav_close topnav_btn" onClick={handleMenu}>
-            <img src={close} alt="" height={32} width={32} />
-          </button>
-          <ul className="topnav_links">
-            <li className="topnav_item">
-              <Link to="/" onClick={() => showMenu && setShowMenu(false)}>
-                Home
-              </Link>
-            </li>
-            <li className="topnav_item">
-              <Link to="/about" onClick={() => showMenu && setShowMenu(false)}>
-                About
-              </Link>
-            </li>
-            <li className="topnav_item">
-              <Link
-                to="https://drive.google.com/file/d/1CN2WKjyUQRnbLDSEebvU5aWeII9sYeNv/view"
-                target="_blank"
-                onClick={() => showMenu && setShowMenu(false)}
-              >
-                Resume
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <header className='header'>
+      <div className='header_container'>
+      {/* Logo */}
+        <div className='header_logo'>Štěpán Šubrt</div>
+
+        {/* Mobile Menu */}
+        <button className='header_mobile' onClick={toggleMenu}><img src={menu} alt='Mobile menu button' /></button>
+        {/* Navigation */}
+        <nav className={`header_navigation ${showMenu ? 'open' : ''}`}>
+          <Link to='/' onClick={toggleMenu}>Home</Link>
+          <Link to='/about' onClick={toggleMenu}>About me</Link>
+          <Link to='https://drive.google.com/file/d/1LcHPE37yr0EWFifvxNdmVuAeHi3tClog/view?usp=drive_link' target='_blank' onClick={toggleMenu}>Resume</Link>
+          <button className='header_mobile header_close' onClick={toggleMenu}><img src={close} alt='Mobile menu button' /></button>
+        </nav>
+      </div>
     </header>
   );
 };

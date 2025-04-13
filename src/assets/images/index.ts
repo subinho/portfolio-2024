@@ -2,3 +2,8 @@ export { default as notes } from './notes.png';
 export { default as quiz_app } from './quiz_app.png';
 export { default as krasaaduse } from './krasaaduse.webp';
 export { default as todo } from './todo_app.png';
+export { default as hero } from './hero.jpg';
+export { default as foto2 } from './foto2.jpg';
+export { default as ecom } from './ecom.png';
+export { default as insurance } from './insurance.png';
+export { default as capstone } from './capstone.png';
